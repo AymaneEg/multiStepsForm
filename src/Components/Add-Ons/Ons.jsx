@@ -72,6 +72,7 @@ export default function Ons() {
 
           }
         } 
+        setUpdate(prev => !prev)
       }
       else{
         setSelectedOns(prev => { return prev.splice(prev.indexOf(1) , 1)})
@@ -84,6 +85,8 @@ export default function Ons() {
 
           }
         } 
+        dispatch(RemoveOns(Odds.LargeStorage.Level))
+        setUpdate(prev => !prev)
       }
       break;
       case Odds.CustomizableProfile : 
@@ -98,6 +101,7 @@ export default function Ons() {
 
           }
         } 
+        setUpdate(prev => !prev)
       }
       else{
         setSelectedOns(prev => { return prev.splice(prev.indexOf(2) , 1)})
@@ -110,6 +114,8 @@ export default function Ons() {
 
           }
         } 
+        dispatch(RemoveOns(Odds.CustomizableProfile.Level))
+        setUpdate(prev => !prev)
       }
       break;
     }
